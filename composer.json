@@ -1,0 +1,10 @@
+{
+    "name": "zimajava/twitter-clone-php-master",
+    "authors": [
+        {
+            "name": "Zima Maksim",
+            "email": "maksimz@wizardsdev.com"
+        }
+    ],
+    "require": {}
+}
