@@ -1,10 +1,15 @@
 {
     "name": "zimajava/twitter-clone-php-master",
+    "license": "MIT",
     "authors": [
         {
             "name": "Zima Maksim",
             "email": "maksimz@wizardsdev.com"
         }
     ],
-    "require": {}
+    "require" : {},
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "heroku/heroku-buildpack-php": "*"
+    }
 }
