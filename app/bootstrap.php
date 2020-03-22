@@ -7,13 +7,13 @@
 // Site Name
     define('SITENAME', 'Twitter Clone');
 // Load Config
-    require_once(APPROOT.'/config/config.php');
+    require_once APPROOT . '/config/config.php';
 // Load Helpers
-    require_once(APPROOT.'/helpers/functions.php');
-    require_once(APPROOT.'/helpers/auth.php');
-    require_once(APPROOT.'/helpers/validation.php');
+    require_once APPROOT . '/helpers/functions.php';
+    require_once APPROOT . '/helpers/auth.php';
+    require_once APPROOT . '/helpers/validation.php';
 
 // Autoload Core Libraries
-    spl_autoload_register(function($className) {
-        require_once(APPROOT.'/libraries/'. $className .'.php');
+    spl_autoload_register(static function($className) {
+        require_once APPROOT . '/libraries/'. $className .'.php';
     });

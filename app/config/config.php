@@ -14,9 +14,4 @@
     define('DB_PASS', $password);
     define('DB_NAME', $database);
 
-//// App Root
-//    define('APPROOT', dirname(dirname(__FILE__)));
-//// URL Root
-//    define('URLROOT', 'http://twitter.local:8888');
-//// Site Name
-//    define('SITENAME', 'Twitter Clone');
+    echo 'config';
