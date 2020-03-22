@@ -1,5 +1,5 @@
-<?php 
-
+<?php
+    echo 'functions';
 function url_for($script) {
   if($script[0] != '/') {
     $script = '/' . $script;
