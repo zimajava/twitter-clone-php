@@ -48,5 +48,5 @@ Modify the .htaccess file inside the public folder to match the name of your ins
 ### Javascript files
 Modify the javascript files in public/js. Change the url to your url. Files to modify, index.js, follow.js, search.js and profile.js
 ```Javascript
-  let url = 'http://twitter.local:8888/';
+  let url = APP_URL || 'http://twitter.local:8888/';
 ```

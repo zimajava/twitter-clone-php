@@ -11,7 +11,7 @@ let collection = document.querySelectorAll('.collection');
 const followBtn = document.querySelectorAll('.follow-btn');
 const username = document.querySelector('#username');
 
-let url = 'http://twitter.local:8888/';
+let url = APP_URL || 'http://twitter.local:8888/';
 
 tweetBodyInput.addEventListener('input', postBtn);
 window.addEventListener('DOMContentLoaded', loadAllTweet());
