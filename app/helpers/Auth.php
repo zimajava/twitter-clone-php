@@ -1,5 +1,5 @@
 <?php
-    echo 'auth';
+
 class Auth {
 
   public static function logIn($user) {

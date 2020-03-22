@@ -10,8 +10,8 @@
     require_once APPROOT . '/config/config.php';
 // Load Helpers
     require_once APPROOT . '/helpers/functions.php';
-    require_once APPROOT . '/helpers/auth.php';
-    require_once APPROOT . '/helpers/validation.php';
+    require_once APPROOT . '/helpers/Auth.php';
+    require_once APPROOT . '/helpers/Validation.php';
 
 // Autoload Core Libraries
     spl_autoload_register(static function($className) {
