@@ -1,18 +1,19 @@
 {
-    "name": "zimajava/twitter-clone-php-master",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Zima Maksim",
-            "email": "maksimz@wizardsdev.com"
-        }
-    ],
-    "require" : {
-        "monolog/monolog": "2.0.2",
-      "ext-openssl": "*"
-    },
-    "require-dev": {
-        "roave/security-advisories": "dev-master",
-        "heroku/heroku-buildpack-php": "*"
+  "name": "zimajava/twitter-clone-php-master",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zima Maksim",
+      "email": "maksimz@wizardsdev.com"
     }
+  ],
+  "require": {
+    "monolog/monolog": "2.0.2",
+    "ext-openssl": "*",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "heroku/heroku-buildpack-php": "*"
+  }
 }

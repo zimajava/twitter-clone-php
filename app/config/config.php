@@ -10,12 +10,12 @@
     $password = $url['pass'] ?? 'test';
     $db = substr($url['path'], 1);
     $database = strlen($db) ? $db : 'twitter';
-//
+
 //    $host2 = $url2['host'] ?? 'localhost';
 //    $username2 = $url2['user'] ?? 'test';
 //    $password2 = $url2['pass'] ?? 'test';
 //    $db2 = substr($url2['path'], 1);
-//    $database2 = $db2;
+//    $database2 = strlen($db2) ? $db2 : 'twitter';
 //
 //        echo '<pre>';
 //    print_r($host2);
