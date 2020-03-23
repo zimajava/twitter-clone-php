@@ -11,7 +11,7 @@
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo url_for('/css/styles.css'); ?>">
     <script>
-        window.APP_URL = <?php echo URLROOT; ?>;
+        window.APP_URL = '/';
     </script>
 </head>
 <body>
