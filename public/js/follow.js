@@ -2,8 +2,6 @@ let followForms = document.querySelectorAll('.followForm');
 const followBtn = document.querySelectorAll('.follow-btn');
 const username = document.querySelector('#username');
 
-let url = APP_URL || 'http://twitter.local:8888/';
-
 followBtn.forEach((btn) => {
   if(btn.classList.contains('following')) {
     btn.innerHTML = 'Following';
@@ -16,7 +14,7 @@ followForms.forEach((followForm) => {
       console.log('hello');
       const followerId = e.target.getAttribute('data-follower-id');
       const followingId = e.target.getAttribute('data-following-id');
-      fetch(url + 'followSystem/follow', {
+      fetch('/followSystem/follow', {
         method: 'POST',
         headers: {
           'content-type': 'application/x-www-form-urlencoded',

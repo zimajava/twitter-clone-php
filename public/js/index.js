@@ -2,8 +2,6 @@ $(document).ready(function() {
   $('textarea').characterCounter();
 });
 
-let url = APP_URL || 'http://twitter.local:8888/';
-
 const tweetBodyInput = document.querySelector('#tweet-body');
 const postTweetBtn = document.querySelector('#postTweetBtn');
 const postForm = document.querySelector('#postForm');
@@ -30,7 +28,7 @@ function postBtn() {
 postForm.addEventListener('submit', (e) => {
   loader.classList.remove('hide');
 
-  fetch(url + 'tweets/postTweet', {
+  fetch('/tweets/postTweet', {
     method: 'POST',
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
@@ -68,7 +66,7 @@ function appendToDiv(div, new_html) {
 }
 
 function loadAllTweet() {
-  fetch(url + 'tweets/loadAllTweets', {
+  fetch('/tweets/loadAllTweets', {
     method: 'GET',
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
@@ -98,7 +96,7 @@ collection.forEach((collection) => {
       
       const followerId = e.target.getAttribute('data-follower-id');
       const followingId = e.target.getAttribute('data-following-id');
-      fetch(url + 'followSystem/follow', {
+      fetch('/followSystem/follow', {
         method: 'POST',
         headers: {
           'content-type': 'application/x-www-form-urlencoded',
@@ -128,7 +126,7 @@ tweetDiv.addEventListener('click', (e) => {
   let userId = tweet.getAttribute('data-user');
   let tweetId = tweet.getAttribute('data-tweet');
   if(e.target.parentElement.classList.contains('likeBtn')) {
-    fetch(url + 'tweets/likeTweet', {
+    fetch('/tweets/likeTweet', {
       method: 'POST',
       headers: {
         'content-type': 'application/x-www-form-urlencoded',
@@ -153,7 +151,7 @@ tweetDiv.addEventListener('click', (e) => {
 
   if(e.target.parentElement.classList.contains('deleteBtn')) {
     let tweetId = e.target.parentElement.getAttribute('data-id');
-    fetch(url + 'tweets/deleteTweet', {
+    fetch('/tweets/deleteTweet', {
       method: 'POST',
       headers: {
         'content-type': 'application/x-www-form-urlencoded',
