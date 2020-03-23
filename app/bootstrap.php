@@ -3,7 +3,7 @@
     // App Root
     define('APPROOT', __DIR__);
 // URL Root
-    $appUrl = getenv('APP_URL') ?? 'http://twitter.local:8888';
+    $appUrl = getenv('APP_URL') ?? '';
     define('URLROOT', $appUrl);
 // Site Name
     define('SITENAME', 'Twitter Clone');

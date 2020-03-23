@@ -1,7 +1,7 @@
 <?php
 
 function url_for($script) {
-  if($script[0] != '/') {
+  if($script[0] !== '/') {
     $script = '/' . $script;
   }
 
