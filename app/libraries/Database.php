@@ -31,12 +31,11 @@ class Database {
 //        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo 'Connected successfully';
+//        echo 'Connected successfully';
       $this->dbh = $pdo;
     } catch(PDOException $e) {
       $this->error = $e->getMessage();
       echo $this->error;
-        echo "mysql:host=$this->host;dbname=$this->dbname;user=$this->user;pass=$this->pass";
     }
   }
 
