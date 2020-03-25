@@ -32,3 +32,4 @@
     define('DB_PASS', $password);
     define('DB_NAME', $database);
 //    heroku addons:create cleardb:ignite --fork=mysql://test:test@localhost/twitter
+//    heroku addons:create jawsdb:kitefin --fork=mysql://test:test@localhost/twitter
