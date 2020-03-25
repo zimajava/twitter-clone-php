@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * PDO Database Class
  * Connect to database
@@ -18,8 +18,8 @@ class Database {
 
   public function __construct() {
     // Set DSN
-    $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
-  
+    $dsn = 'mysql:host=' . $this->host . '; dbname=' . $this->dbname;
+
     $options = [
       PDO::ATTR_PERSISTENT => true,
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -27,15 +27,16 @@ class Database {
 
     // Create PDO instance
     try {
-      $this->dbh = new PDO($dsn, $this->user, $this->pass);
-      $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo = new PDO($dsn, $this->user, $this->pass);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $this->dbh = $pdo;
     } catch(PDOException $e) {
       $this->error = $e->getMessage();
       echo $this->error;
     }
-  } 
+  }
 
-  // Prepare statement with query 
+  // Prepare statement with query
   public function query($sql) {
     $this->stmt = $this->dbh->prepare($sql);
   }
@@ -69,13 +70,13 @@ class Database {
   // Get result set as array of objects
   public function resultSet() {
     $this->execute();
-    return $this->stmt->fetchAll(PDO::FETCH_OBJ); 
+    return $this->stmt->fetchAll(PDO::FETCH_OBJ);
   }
 
   // Get single recored as object
   public function single() {
     $this->execute();
-    return $this->stmt->fetch(PDO::FETCH_OBJ); 
+    return $this->stmt->fetch(PDO::FETCH_OBJ);
   }
 
   // Get row count
