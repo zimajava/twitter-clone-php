@@ -3,7 +3,7 @@
     session_start();
 
 // DB Params
-    $url = parse_url(getenv('CLEARDB_TEAL_URL'));
+    $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
 //    $url2 = parse_url('mysql://b8d74e356cd88c:2adf3688@us-cdbr-iron-east-04.cleardb.net/heroku_85276c5d0e97083?reconnect=true');
     $host = $url['host'] ?? 'localhost';
     $username = $url['user'] ?? 'test';
