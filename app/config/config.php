@@ -17,15 +17,15 @@
 //    $db2 = substr($url2['path'], 1);
 //    $database2 = strlen($db2) ? $db2 : 'twitter';
 //
-//        echo '<pre>';
-//    print_r($host2);
-//    echo '</br>';
-//    print_r($username2);
-//    echo '</br>';
-//    print_r($password2);
-//    echo '</br>';
-//    print_r($database2);
-//    echo '</pre>';
+        echo '<pre>';
+    print_r($host);
+    echo '</br>';
+    print_r($username);
+    echo '</br>';
+    print_r($password);
+    echo '</br>';
+    print_r($database);
+    echo '</pre>';
 
     define('DB_HOST', $host);
     define('DB_USER', $username);
